@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@import "@fontsource/fredoka-one";
+@import "@fontsource/nunito";
+@import "@fontsource/space-mono";
+
+/* ====================== ТВОЯ КАСТОМНАЯ ТЕМА ====================== */
+@theme {
+  /* Шрифты */
+  --font-display: "Fredoka One", cursive;
+  --font-body: "Nunito", sans-serif;
+  --font-mono: "Space Mono", monospace;
+
+  /* Цвета */
+  --color-cream-50: #fefdf8;
+  --color-cream-100: #fdf8ec;
+  --color-cream-200: #f9efcf;
+  --color-cream-300: #f3e2a8;
+
+  --color-forest-400: #5a9e6f;
+  --color-forest-500: #3d8b56;
+  --color-forest-600: #2a7040;
+  --color-forest-700: #1e5530;
+
+  --color-amber-400: #fbbf24;
+  --color-amber-500: #f59e0b;
+
+  --color-rose-400: #fb7185;
+  --color-rose-500: #f43f5e;
+
+  --color-sky-400: #38bdf8;
+  --color-sky-500: #0ea5e9;
+
+  --color-violet-400: #a78bfa;
+  --color-violet-500: #8b5cf6;
+
+  /* Pet-палитра */
+  --color-pet-bg: #1a1a2e;
+  --color-pet-card: #16213e;
+  --color-pet-accent: #0f3460;
+  --color-pet-glow: #e94560;
+  --color-pet-teal: #00b4d8;
+  --color-pet-lime: #a8ff3e;
+  --color-pet-amber: #ffbe0b;
+  --color-pet-pink: #ff006e;
+
+  /* Анимации */
+  --animate-breathe: breathe 3s ease-in-out infinite;
+  --animate-bounce-slow: bounce 2s infinite;
+  --animate-bounce-small: bounce-small 2s infinite;
+  --animate-pulse-slow: pulse 3s infinite;
+  --animate-wiggle: wiggle 2s ease-in-out infinite;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+  --animate-fadeIn: fadeIn 0.4s ease-out;
+  --animate-slideUp: slideUp 0.4s ease-out;
+  --animate-pop: pop 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* Keyframes (пишутся обычным CSS внутри @theme) */
+  @keyframes breathe {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+  }
+
+  @keyframes bounce-small {
+    0%, 100% { transform: translateY(-10%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+    50% { transform: translateY(0); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  }
+
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+  }
+
+  @keyframes glow {
+    from { box-shadow: 0 0 10px #e94560, 0 0 20px #e9456040; }
+    to { box-shadow: 0 0 20px #e94560, 0 0 40px #e9456080; }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pop {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  /* Backdrop blur */
+  --backdrop-blur-xs: blur(2px);
+}

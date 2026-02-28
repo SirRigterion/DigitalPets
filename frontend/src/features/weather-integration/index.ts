@@ -1,0 +1,1 @@
+export { weatherAPI } from './model/weatherApi'
